@@ -103,4 +103,3 @@ document.addEventListener('keypress', e => {
     startGame()
   }
 })
-
