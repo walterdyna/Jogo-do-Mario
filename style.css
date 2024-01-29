@@ -33,11 +33,16 @@
     top: 50vh;
     cursor: pointer;
     z-index: 1;
+    border-radius: 30px;
   }
   button:hover {
     border: 2px solid green;
     background: none;
     color: green;
+  }
+
+  button:hover {
+    transform: scale(1.1);
   }
   
   .game-over {
@@ -78,7 +83,89 @@
     top: 0;
     animation: clouds-animation 20s infinite linear;
   }
+  /* ------------------------------------------------------------------------------------------------------------- */
+
+  /* Adicione isso ao seu CSS onde apropriado */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#submitName {
+  margin-top: -115px;
   
+}
+
+
+
+
+  /* --------------------------------------------------------------------------------------------------------- */
+
+  .cronometro {
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  .cronometro h1 {
+    color: blue;
+  }
+
+  .timer {
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: #172953;
+    min-width: 90px;
+  }
+
+  .separator {
+    padding: 10px;
+    color: #525763;
+  }
+
+  #milleseconds {
+    font-size: 30px;
+    color: #525763;
+  }
+    
   @keyframes clouds-animation {
     from {
       right: -550px;

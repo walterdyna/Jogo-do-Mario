@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./img/mario.gif">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./img/mario.gif" />
     <title>Super Mario - Alex Dyna</title>
   </head>
   <body>
-  <p>Todos esquerdos reservado!!! </p>
+    <p>Todos os direitos reservados!!!</p>
     <div class="game-board">
-      <img class="mario" src="./img/mario.gif" alt="mario">
-      <img class="pipe" src="./img/pipe.png" alt="tubo">
-      <img class="clouds" src="./img/clouds.png" alt="nuvem">
-      <button class="start" onclick="startGame()">Iniciar a corrida</button>
+      <img class="mario" src="./img/mario.gif" alt="mario" />
+      <img class="pipe" src="./img/pipe.png" alt="tubo" />
+      <img class="clouds" src="./img/clouds.png" alt="nuvem" />
+      <button class="start" id="startbtn">Iniciar a corrida</button>
+
+      <!-- Modal -->
+      <div id="playerModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Digite seu nome</h2>
+          <label for="playerName">Seu Nome:</label>
+          <input type="text" id="playerName" placeholder="Digite seu nome" />
+          <button id="submitName">Enviar Nome</button>
+        </div>
+      </div>
+
+      <!-- Cronômetro -->
+      <div class="cronometro">
+        <h1>Cronômetro</h1>
+        <div class="timer">
+          <div class="time" id="minutes">00</div>
+          <div class="separator">:</div>
+          <div class="time" id="seconds">00</div>
+          <div class="separator">:</div>
+          <div class="time" id="milleseconds">000</div>
+        </div>
+      </div>
     </div>
 
-    <div class="game-over"><h1>Game Over :(</h1><button onclick="restartGame()">Reiniciar</button></div>
+    <div id="score">Score <b>00</b></div>
+    <!-- Game Over -->
+    <div class="game-over">
+      <h1>Game Over :(</h1>
+      <button class="reset" id="resetbtn" onclick="resetTime()">
+        Reiniciar
+      </button>
+    </div>
+
+    <script defer src="./script.js"></script>
   </body>
-<script defer src="./script.js"></script>
 </html>
